@@ -41,16 +41,6 @@ public class Student {
     public Student() {
     }
 
-    public Student(Long npmMahasiswa, @NotNull String namaMahasiswa, @NotNull String prodiMahasiswa, @NotNull String jenjangMahasiswa, @NotNull Long semesterMahasiswa, @NotNull Float ipkMahasiswa, @NotNull Long totalSksMahasiswa) {
-        this.npmMahasiswa = npmMahasiswa;
-        this.namaMahasiswa = namaMahasiswa;
-        this.prodiMahasiswa = prodiMahasiswa;
-        this.jenjangMahasiswa = jenjangMahasiswa;
-        this.semesterMahasiswa = semesterMahasiswa;
-        this.ipkMahasiswa = ipkMahasiswa;
-        this.totalSksMahasiswa = totalSksMahasiswa;
-    }
-
     public Long getNpmMahasiswa() {
         return npmMahasiswa;
     }
