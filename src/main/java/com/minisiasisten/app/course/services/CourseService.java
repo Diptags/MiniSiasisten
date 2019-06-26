@@ -1,12 +1,10 @@
 package com.minisiasisten.app.course.services;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.rest.webmvc.ResourceNotFoundException;
-import org.springframework.stereotype.Service;
-
 import com.minisiasisten.app.course.dto.CreateCourseDto;
-import com.minisiasisten.app.course.repositories.CourseRepository;
 import com.minisiasisten.app.course.models.Course;
+import com.minisiasisten.app.course.repositories.CourseRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -15,6 +13,7 @@ public class CourseService {
 
     @Autowired
     private CourseRepository courseRepository;
+
     private String courseNotFoundMessage = "Data mata kuliah tidak ditemukan";
 
     public List<Course> getAllCourses(){
@@ -22,8 +21,7 @@ public class CourseService {
     }
 
     public Course getCourseById(String idMataKuliah) {
-        return courseRepository.findById(idMataKuliah)
-                .orElseThrow(() -> new ResourceNotFoundException(courseNotFoundMessage));
+        return courseRepository.getOne(idMataKuliah);
     }
 
     public Course createCourse(CreateCourseDto courseDto){

@@ -37,15 +37,6 @@ public class Course {
 
     }
 
-    public Course(String idMataKuliah, @NotNull String namaMataKuliah, @NotNull String prodiMataKuliah, @NotNull String jenjangMataKuliah, @NotNull Long semesterMataKuliah, String deskripsiMataKuliah) {
-        this.idMataKuliah = idMataKuliah;
-        this.namaMataKuliah = namaMataKuliah;
-        this.prodiMataKuliah = prodiMataKuliah;
-        this.jenjangMataKuliah = jenjangMataKuliah;
-        this.semesterMataKuliah = semesterMataKuliah;
-        this.deskripsiMataKuliah = deskripsiMataKuliah;
-    }
-
     public String getIdMataKuliah() {
         return idMataKuliah;
     }
